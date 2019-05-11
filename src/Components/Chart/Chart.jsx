@@ -1,11 +1,11 @@
 import React from "react";
 
-export default class Stu extends React.Component {
+export default class Chart extends React.Component {
     render() {
         return (
             <ul>
                 <li>
-                    student
+                    Chart
                 </li>
             </ul>
         )

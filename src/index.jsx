@@ -2,9 +2,16 @@ import React from 'react';//引入react
 import ReactDom from 'react-dom';//引入react-dom
 import { Route, Switch, HashRouter as Router } from "react-router-dom";
 
-import Home from './Components/Home/Home.jsx';
-import About from './Components/About/About.jsx';
-import Stu from './Components/student/student.jsx';
+import StartPage from './Components/StartPage/StartPage.jsx';
+import DataManger from './Components/DataManger/DataManger.jsx';
+import Chart from './Components/Chart/Chart.jsx';
+import Edit from './Components/Edit/Edit.jsx';
+import Explain from './Components/Explain/Explain.jsx';
+import Set from './Components/Set/Set.jsx';
+
+
+
+
 import Aroute from './Components/navigation/navigation.jsx';
 
 
@@ -17,24 +24,45 @@ class App extends React.Component {
 
                     <Route
                         exact
-                        path="/Home"
+                        path="/StartPage"
                         render={props => (
-                            <Home />
+                            <StartPage />
                         )
                         }
                     />
 
                     <Route
-                        path="/About"
+                        path="/DataManger"
                         render={props => (
-                            <About />
+                            <DataManger />
                         )}
                     />
 
                     <Route
-                        path="/Stu"
+                        path="/Chart"
                         render={props => (
-                            <Stu />
+                            <Chart />
+                        )}
+                    />
+
+                    <Route
+                        path="/Edit"
+                        render={props => (
+                            <Edit />
+                        )}
+                    />
+
+                    <Route
+                        path="/Set"
+                        render={props => (
+                            <Set />
+                        )}
+                    />
+
+                    <Route
+                        path="/Explain"
+                        render={props => (
+                            <Explain />
                         )}
                     />
                 </div>

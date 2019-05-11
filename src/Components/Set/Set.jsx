@@ -1,11 +1,11 @@
 import React from "react";
 
-export default class About extends React.Component {
+export default class Set extends React.Component {
     render() {
         return (
             <ul>
                 <li>
-                    About
+                    Set
                 </li>
             </ul>
         )
