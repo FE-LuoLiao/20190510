@@ -1,39 +1,44 @@
 import React from 'react';//引入react
 import ReactDom from 'react-dom';//引入react-dom
-import { Router as Route } from "react-router-dom";
+import { Route, Switch, HashRouter as Router } from "react-router-dom";
 
 import Home from './Components/Home/Home.jsx';
+import About from './Components/About/About.jsx';
+import Stu from './Components/student/student.jsx';
+import Aroute from './Components/navigation/navigation.jsx';
+
 
 class App extends React.Component {
     render() {
         return (
-            <div>
-                <ul>
-                    <li>
-                        <Route
-                            path="/Home"
-                            render={props => (
-                                <Home />
-                            )
-                            }
-                        />
+            <Router>
+                <div>
+                    <Aroute />
 
-                        <Route
-                            path="/About"
-                            render={props => (
-                                <About />
-                            )}
-                        />
+                    <Route
+                        exact
+                        path="/Home"
+                        render={props => (
+                            <Home />
+                        )
+                        }
+                    />
 
-                        <Route
-                            path="/Stu"
-                            render={props => (
-                                <Stu />
-                            )}
-                        />
-                    </li>
-                </ul>
-            </div>
+                    <Route
+                        path="/About"
+                        render={props => (
+                            <About />
+                        )}
+                    />
+
+                    <Route
+                        path="/Stu"
+                        render={props => (
+                            <Stu />
+                        )}
+                    />
+                </div>
+            </Router >
         )
     }
 }

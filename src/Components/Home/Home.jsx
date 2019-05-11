@@ -7,8 +7,7 @@ export default class Home extends React.Component {
         return (
             <ul>
                 <li>
-                    <Link to="/Home">Home</Link>
-                    Home
+                     Home   
                 </li>
             </ul>
         )
