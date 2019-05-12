@@ -8,7 +8,7 @@ import Chart from './Components/Chart/Chart.jsx';
 import Edit from './Components/Edit/Edit.jsx';
 import Explain from './Components/Explain/Explain.jsx';
 import Set from './Components/Set/Set.jsx';
-
+import UserList from './Components/DataManger/UserList.jsx';
 
 
 
@@ -21,7 +21,6 @@ class App extends React.Component {
             <Router>
                 <div>
                     <Aroute />
-
                     <Route
                         exact
                         path="/StartPage"
@@ -63,6 +62,12 @@ class App extends React.Component {
                         path="/Explain"
                         render={props => (
                             <Explain />
+                        )}
+                    />
+                    <Route
+                        path="/UserList"
+                        render={props => (
+                            <UserList />
                         )}
                     />
                 </div>

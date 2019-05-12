@@ -14,7 +14,7 @@ export default class Aroute extends React.Component {
                         <NavItem title="首页" list={[
                             {
                                 navName: "用户列表",
-                                navRoute: "/123"
+                                navRoute: "/UserList"
                             },
                             {
                                 navName: "商家列表",
@@ -34,20 +34,68 @@ export default class Aroute extends React.Component {
                             }
                         ]} />
                     </li>
+
                     <li>
-                        <Link to="/DataManger">数据管理</Link>
+                        <NavItem title="数据管理" list={[
+                            {
+                                navName: "用户列表",
+                                navRoute: "/123"
+                            },
+                            {
+                                navName: "商家列表",
+                                navRoute: "/234"
+                            },
+                        ]} />
                     </li>
                     <li>
-                        <Link to="/Chart">图表</Link>
+                        <NavItem title="图标" list={[
+                            {
+                                navName: "用户列表",
+                                navRoute: "/123"
+                            },
+                            {
+                                navName: "商家列表",
+                                navRoute: "/234"
+                            },
+                        ]} />
+                    </li>
+
+                    <li>
+                        <NavItem title="编辑" list={[
+                            {
+                                navName: "用户列表",
+                                navRoute: "/123"
+                            },
+                            {
+                                navName: "商家列表",
+                                navRoute: "/234"
+                            },
+                        ]} />
                     </li>
                     <li>
-                        <Link to="/Edit">编辑</Link>
+                        <NavItem title="设置" list={[
+                            {
+                                navName: "用户列表",
+                                navRoute: "/123"
+                            },
+                            {
+                                navName: "商家列表",
+                                navRoute: "/234"
+                            },
+                        ]} />
                     </li>
+
                     <li>
-                        <Link to="/Set">设置</Link>
-                    </li>
-                    <li>
-                        <Link to="/Explain">说明</Link>
+                        <NavItem title="说明" list={[
+                            {
+                                navName: "用户列表",
+                                navRoute: "/123"
+                            },
+                            {
+                                navName: "商家列表",
+                                navRoute: "/234"
+                            },
+                        ]} />
                     </li>
                 </ul>
             </div>

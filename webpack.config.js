@@ -25,8 +25,7 @@ const webpackConfigBase = {
         // publicPath: './'
     },
     module: {
-        rules: [
-            {
+        rules: [{
                 test: /\.jsx$/,
                 exclude: /node_modules/,
                 use: {
@@ -34,8 +33,19 @@ const webpackConfigBase = {
                 }
             },
             {
-                test:/\.css$/,
-                use:['style-loader','css-loader']
+                test: /\.css$/,
+                use: ['style-loader', 'css-loader']
+            },
+            {
+                test: /\.(png|jpg|jpeg|gif)$/,
+                use: [{
+                    loader: 'url-loader',
+                    options: {
+                        name: '[name]-[hash:5].[ext]',
+                        limit: 1000,
+                        outputPath: 'assets/imgs/' // html和css中图片的输出路径
+                    }
+                }]
             }
         ]
     },

@@ -1,18 +1,21 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import "./navigation.jsx";
+
+
 
 export default class NavItem extends React.Component {
 
     constructor(props) {
         super(props);
         this.state = {
-            show:false,
+            show: false,
         };
     }
     //
-    handleClick(){
+    handleClick() {
         this.setState({
-            show: !this.state.show 
+            show: !this.state.show
         })
     }
 
@@ -21,21 +24,19 @@ export default class NavItem extends React.Component {
         var siteElements = [];
         this.props.list.forEach(item => {
             siteElements.push(
-                <div key={item.navName}>
-                    <ul>
-                        <li>
-                        <Link to={item.navRoute}>{item.navName}</Link>
-                        </li>
-                    </ul>
-                </div >
+                <Link to={item.navRoute} key={item.navName}>{item.navName}</Link>
             )
 
         });
         return (
-            <div>
-                <h1 onClick={this.handleClick.bind(this)}>{this.props.title}</h1>
-                
-                {this.state.show ? siteElements : ''}
+            <div className="list-con">
+                <h1 onClick={this.handleClick.bind(this)}>
+                    {this.props.title}
+                    <span style={{ transform: `rotate(${this.state.show ? '180deg' : '0deg'})` }}></span>
+                </h1>
+                <div className="list" style={{ height: this.state.show ? this.props.list.length * 50 + 'px' : '0px' }}>
+                    {siteElements}
+                </div>
             </div>
         )
     }
