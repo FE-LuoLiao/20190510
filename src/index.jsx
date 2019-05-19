@@ -9,7 +9,9 @@ import Edit from './Components/Edit/Edit.jsx';
 import Explain from './Components/Explain/Explain.jsx';
 import Set from './Components/Set/Set.jsx';
 import UserList from './Components/DataManger/UserList.jsx';
-
+import ShoperList from './Components/DataManger/ShoperList.jsx';
+import FoodList from './Components/DataManger/FoodList.jsx';
+import OrderList from './Components/DataManger/OrderList.jsx'
 
 
 import Aroute from './Components/navigation/navigation.jsx';
@@ -64,12 +66,37 @@ class App extends React.Component {
                             <Explain />
                         )}
                     />
+
                     <Route
                         path="/UserList"
                         render={props => (
                             <UserList />
+
                         )}
                     />
+
+                    <Route
+                        path="/ShoperList"
+                        render={props => (
+                            <ShoperList />
+
+                        )}
+                    />
+
+                    <Route
+                        path="/FoodList"
+                        render={props => (
+                            <FoodList />
+                        )}
+                    />
+
+                    <Route
+                        path="/OrderList"
+                        render={props => (
+                            <OrderList />
+                        )}
+                    />
+
                 </div>
             </Router >
         )

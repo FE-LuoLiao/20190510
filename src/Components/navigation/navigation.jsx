@@ -18,15 +18,15 @@ export default class Aroute extends React.Component {
                             },
                             {
                                 navName: "商家列表",
-                                navRoute: "/234"
+                                navRoute: "/ShoperList"
                             },
                             {
                                 navName: "食品列表",
-                                navRoute: "/456"
+                                navRoute: "/FoodList"
                             },
                             {
                                 navName: "订单列表",
-                                navRoute: "/789"
+                                navRoute: "/OrderList"
                             },
                             {
                                 navName: "管理员列表",

@@ -1,0 +1,23 @@
+.user-list {
+    float: left;
+    width: auto;
+    height: 100%;
+}
+
+.user-list ul {
+    margin: 0px;
+    padding: 0px;
+}
+
+.user-nav {
+    display: block;
+    height: 20px;
+    width: 100%;
+}
+
+.user-nav li {
+    display: block;
+    list-style: none;
+    float: left;
+    width: 500px;
+}
