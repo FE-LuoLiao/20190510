@@ -41,6 +41,6 @@ export default class NormalList extends React.Component {
                 {normallist}
             </div>
         )
-    }
+    } 
 
 }

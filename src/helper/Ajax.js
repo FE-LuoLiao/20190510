@@ -16,7 +16,6 @@ class Ajax {
                 }
             }
         }
-
         xmlhttp.open("get", url, true);
 
         xmlhttp.send();
