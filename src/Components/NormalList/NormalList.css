@@ -15,9 +15,10 @@
     width: 100%;
 }
 
-.user-nav li {
+.user-nav ul li {
     display: block;
     list-style: none;
     float: left;
-    width: 500px;
+    text-align: center;
+    width: 383px;
 }

@@ -3,7 +3,7 @@ import ReactDom from 'react-dom';//引入react-dom
 import { Route, Switch, HashRouter as Router } from "react-router-dom";
 
 import StartPage from './Components/StartPage/StartPage.jsx';
-import DataManger from './Components/DataManger/DataManger.jsx';
+import AddStore from './Components/DataManger/AddStore.jsx';
 import Chart from './Components/Chart/Chart.jsx';
 import Edit from './Components/Edit/Edit.jsx';
 import Explain from './Components/Explain/Explain.jsx';
@@ -33,9 +33,9 @@ class App extends React.Component {
                     />
 
                     <Route
-                        path="/DataManger"
+                        path="/AddStore"
                         render={props => (
-                            <DataManger />
+                            <AddStore />
                         )}
                     />
 

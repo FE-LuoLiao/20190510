@@ -36,13 +36,13 @@ export default class Aroute extends React.Component {
                     </li>
 
                     <li>
-                        <NavItem title="数据管理" list={[
+                        <NavItem title="添加数据" list={[
                             {
-                                navName: "用户列表",
+                                navName: "添加商铺",
                                 navRoute: "/123"
                             },
                             {
-                                navName: "商家列表",
+                                navName: "添加商品",
                                 navRoute: "/234"
                             },
                         ]} />

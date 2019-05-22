@@ -14,31 +14,44 @@ export default class PageNavigation extends React.Component {
             currentPage: +event.target.dataset.index
         })
         this.props.getPage(event.target.dataset.index);
+        console.log(event.target.dataset.index);
     }
     render() {
         const pagesum = Math.ceil(this.state.count / this.state.pageNum);
         return (
             <div>
                 <ul>
-                    <li style={{listStyle:'none',float:'left'}}
-                    
+                    <li style={{ listStyle: 'none', float: 'left', cursor: 'pointer' }}
+                        onClick={() => {
+                            this.state.currentPage--
+                            if (this.state.currentPage <= 1) {
+                                this.state.currentPage = 1
+                            }
+                            this.props.getPage(this.state.currentPage)
+                        }}
                     >《</li>
                     {
-
                         (Array.from({ length: pagesum }, (v, i) => i)).map((item, index) => {
                             return (
-
                                 <li data-index={++index} key={item}
-                                    style={{ listStyle: 'none', float: 'left', width: '20px', backgroundColor: this.state.currentPage == index ? 'blue' : '#fff' }}
+                                    style={{ listStyle: 'none', float: 'left', width: '20px', backgroundColor: this.state.currentPage == index ? 'blue' : '#fff', cursor: 'pointer' }}
                                     onClick={this.handleClick.bind(this)}>
                                     {index}
                                 </li>
                             )
                         })
                     }
-                    <li style={{listStyle:'none',float:'left'}}>》</li>
+                    <li style={{ listStyle: 'none', float: 'left', cursor: 'pointer' }}
+                        onClick={() => {
+                            this.state.currentPage++
+                            if (this.state.currentPage > pagesum) {
+                                this.state.currentPage = 1
+                            }
+                            this.props.getPage(this.state.currentPage)
+                        }}
+                    >》</li>
                 </ul>
             </div>
         )
     }
-}
+} 
