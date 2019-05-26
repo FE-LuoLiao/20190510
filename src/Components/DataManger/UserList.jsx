@@ -9,7 +9,8 @@ export default class UserList extends React.Component {
         super(props);
         this.state = {
             data: [],
-            limit: 20
+            limit: 20,
+            count: 1
         };
     }
     //
@@ -20,6 +21,12 @@ export default class UserList extends React.Component {
                 data: data
             });
         });
+
+        ajax.get('https://elm.cangdu.org/v1/users/count', { type: 'json' }, function (count) {
+            _this.setState({
+                count: count
+            })
+        })
     }
 
     getPage(index) {
@@ -38,7 +45,7 @@ export default class UserList extends React.Component {
         return (
             <div>
                 <NormalList keys={['registe_time', 'username', 'city']} getData={this.state.data} />
-                <PageNavigation getPage={this.getPage.bind(this)} />
+                <PageNavigation getPage={this.getPage.bind(this)} getCount={this.state.count.count} />
             </div>
 
 
