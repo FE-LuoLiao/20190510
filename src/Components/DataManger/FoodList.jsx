@@ -27,5 +27,4 @@ export default class FoodList extends React.Component {
             <NormalList keys={['name', 'description', 'id']} getData={this.state.data} />
         )
     }
-
 }

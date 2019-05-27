@@ -3,7 +3,6 @@ import NormalList from '../NormalList/NormalList.jsx';
 import ajax from '../../helper/Ajax.js';
 
 export default class OrderList extends React.Component {
-
     constructor(props) {
         super(props);
         this.state = {

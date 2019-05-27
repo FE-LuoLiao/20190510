@@ -17,10 +17,8 @@ class Ajax {
             }
         }
         xmlhttp.open("get", url, true);
-
         xmlhttp.send();
     }
-
 }
 
 export default new Ajax();
