@@ -18,7 +18,7 @@ export default class NormalList extends React.Component {
     }
 
     render() {
-        console.log('nor render', this.props);
+        
         //定义一个数组，存放每个列表的元素
         // console.log(this.props.getData);
         var normallist = [];

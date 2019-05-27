@@ -5,7 +5,7 @@ export default class AddStore extends React.Component {
         return (
             <ul>
                 <li>
-                    AddStore
+                    
                 </li>
             </ul>
         )
