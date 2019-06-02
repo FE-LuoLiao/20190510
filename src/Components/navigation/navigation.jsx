@@ -18,15 +18,15 @@ export default class Aroute extends React.Component {
                             },
                             {
                                 navName: "商家列表",
-                                navRoute: "/234"
+                                navRoute: "/ShoperList"
                             },
                             {
                                 navName: "食品列表",
-                                navRoute: "/456"
+                                navRoute: "/FoodList"
                             },
                             {
                                 navName: "订单列表",
-                                navRoute: "/789"
+                                navRoute: "/OrderList"
                             },
                             {
                                 navName: "管理员列表",
@@ -36,14 +36,14 @@ export default class Aroute extends React.Component {
                     </li>
 
                     <li>
-                        <NavItem title="数据管理" list={[
+                        <NavItem title="添加数据" list={[
                             {
-                                navName: "用户列表",
-                                navRoute: "/123"
+                                navName: "添加商铺",
+                                navRoute: "/AddStore"
                             },
                             {
-                                navName: "商家列表",
-                                navRoute: "/234"
+                                navName: "添加商品",
+                                navRoute: "/AddShop"
                             },
                         ]} />
                     </li>
