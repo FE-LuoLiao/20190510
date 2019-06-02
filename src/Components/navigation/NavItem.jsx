@@ -26,7 +26,6 @@ export default class NavItem extends React.Component {
             siteElements.push(
                 <Link to={item.navRoute} key={item.navName}>{item.navName}</Link>
             )
-
         });
         return (
             <div className="list-con">
