@@ -15,14 +15,16 @@ export default class PageNavigation extends React.Component {
             currentPage: +event.target.dataset.index
         })
         this.props.getPage(event.target.dataset.index);
+        console.log(event.target.dataset.index)
+        this.pageGen(1,this.state.currentPage);
     }
 
-    pageGen(pageNum,currentPage){
-        var page = [];
-        var count;
-        if(pageNum>count){
-            page
-        }
+    pageGen(pageNum, currentPage) {
+        var page = [1];
+        if(currentPage == 1){
+            page.push(4);
+        }      
+        return page;
     }
 
     render() {
@@ -43,16 +45,15 @@ export default class PageNavigation extends React.Component {
                     >《</li>
                     {
 
-                        (Array.from({ length: pagesum }, (v, i) => i)).map((item, index) => {
-                            
-                                return (
-                                    <li data-index={++index} key={item}
-                                        style={{ listStyle: 'none', float: 'left', width: '20px', backgroundColor: this.state.currentPage == index ? 'blue' : '#fff', cursor: 'pointer' }}
-                                        onClick={this.handleClick.bind(this)}>
-                                        {index}
-                                    </li>
-                                )
-                            }
+                        this.pageGen(1,this.state.currentPage).map((item, index) => {
+                            return (
+                                <li data-index={++index} key={item}
+                                    style={{ listStyle: 'none', float: 'left', width: '20px', backgroundColor: this.state.currentPage == index ? 'blue' : '#fff', cursor: 'pointer' }}
+                                    onClick={this.handleClick.bind(this)}>
+                                    {item}
+                                </li>
+                            )
+                        }
                         )
 
                     }
