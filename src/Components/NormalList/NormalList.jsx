@@ -28,15 +28,19 @@ export default class NormalList extends React.Component {
                 <li key={index} className="user-nav">
                     <ul>
                         {
-                            this.props.keys.map(k=>{
+                            this.props.keys.map(k=>{                               
                                 return <li key={k}>{item[k]}</li>;
+                                
                             })
                         }
                     </ul>
                 </li>
             )
-        })
+            
+        }) 
+        
         return (
+           
             <div className="user-list">
                 {normallist}
             </div>
