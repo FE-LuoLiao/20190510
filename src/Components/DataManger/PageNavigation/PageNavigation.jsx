@@ -54,7 +54,6 @@ export default class PageNavigation extends React.Component {
                                 )
                             }
                         )
-
                     }
                     <li style={{ listStyle: 'none', float: 'left', cursor: 'pointer' }}
                         onClick={() => {
