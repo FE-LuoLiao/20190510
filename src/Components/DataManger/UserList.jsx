@@ -43,12 +43,10 @@ export default class UserList extends React.Component {
 
     render() {
         return (
-            <div>
+            <div style = {{paddingLeft:'200px'}}>
                 <NormalList keys={['registe_time', 'username', 'city']} getData={this.state.data} />
                 <PageNavigation getPage={this.getPage.bind(this)} getCount={this.state.count.count} />
             </div>
-
-
         )
     }
 

@@ -1,0 +1,25 @@
+.page-navication li {
+    list-style: none;
+    float: left;
+    width: 40px;
+    text-align: center;
+    border: 1px solid #20a0ff;
+    margin-left: -1px;
+    cursor: pointer;
+}
+
+.page-point:hover{
+    background-color: #000;
+}
+
+.page-navication li:first-child {
+    border-radius: 4px 0 0 4px;
+}
+
+.page-navication li:last-child {
+    border-radius: 0 4px 4px 0;
+}
+
+.page-navication li:hover{
+    border-color: #555;
+}
