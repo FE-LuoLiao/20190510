@@ -20,7 +20,8 @@ export default class PageNavigation extends React.Component {
             
             this.setState({
                 currentPage:event.target.dataset.currentPage++
-                                                                                                                            });
+            });
+            
         }
         // if(event.target.dataset.id == 'left'){
         //     event.target.dataset.currentPage--;
