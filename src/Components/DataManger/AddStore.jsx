@@ -60,7 +60,6 @@ export default class AddStore extends React.Component {
         this.setState({
             show: !this.state.show
         })
-
     }
 
     optionMoseOver(event) {
@@ -140,8 +139,9 @@ export default class AddStore extends React.Component {
 
                         <li>
                             <span>*店铺分类</span>
-                            {/* 整个 */}
+                            {/* 整个下拉框的div */}
                             <div style={{ position: 'relative' }}>
+                                {/* 下拉框header的div */}
                                 <div style={{
                                     width: '200px',
                                     height: '25px',
@@ -161,6 +161,7 @@ export default class AddStore extends React.Component {
                                         onClick={this.navClick.bind(this)}
                                     ></a>
                                 </div>
+                                {/* 一级下拉框Ddiv */}
                                 <div onMouseLeave={this.optionMoseLeave.bind(this)}>
                                     <div style={{
                                         width: '200px',
@@ -172,6 +173,7 @@ export default class AddStore extends React.Component {
                                         display: this.state.show ? 'block' : 'none'
                                     }}>
                                         <ul>
+                                            {/* Object.keys()方法为获取对象键的值，storeType为一级下拉列表，每个一级下拉列表为一个数组，二级下拉列表为数组的元素 */}
                                             {Object.keys(this.state.storeType).map((item) => {
                                                 return <li className='parent-option'
                                                     onMouseOver={this.optionMoseOver.bind(this)}
@@ -180,6 +182,7 @@ export default class AddStore extends React.Component {
                                             })}
                                         </ul>
                                     </div>
+                                    {/* 二级下拉列表 */}
                                     <div style={{
                                         width: '200px',
                                         height: '100px',
