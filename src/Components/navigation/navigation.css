@@ -73,6 +73,6 @@
         transform: rotate(0deg);
         transition: transform 0.5s;
         background-repeat: no-repeat;
-        background-image: url(../../../picture/arrow_down.png);
+        background-image: url(../picture/arrow_down.png);
         background-size: 14px;
     }

@@ -1,3 +1,38 @@
-li{
+li {
     list-style: none;
+}
+
+.switch {
+    width: 15px;
+    height: 15px;
+    background: blue;
+    border-radius: 15px;
+    display: block;
+    margin: 3px;
+    pointer-events: none;
+    background-color: #fff;
+    transition: margin-left 0.5s;
+}
+
+.switch-container {
+    width: 45px;
+    height: 21px;
+    border-radius: 15px;
+    border: 1px solid transparent;
+    transition: background-color 0.5s;
+}
+
+.upload-avatar {
+    width: 100px;
+    height: 100px;
+    border: 1px dashed #333;
+    border-radius: 3px;
+}
+
+.upload-avatar:hover {
+    cursor: pointer;
+    border: 1px dashed blue;
+}
+.parent-option:hover{
+    background-color: blue;
 }
