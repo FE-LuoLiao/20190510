@@ -2,6 +2,64 @@ li {
     list-style: none;
 }
 
+.store-name span {
+    color: #8391a5;
+    font-size: 15px;
+}
+
+.store-name span a {
+    color: red;
+}
+
+.store-name input {
+    width: 600px;
+    height: 40px;
+    margin: 0px 0px 25px 30px;
+    border: 1px solid #8391a5;
+    border-radius: 5px
+}
+
+.det-addr span {
+    color: #8391a5;
+    font-size: 15px;
+}
+
+.det-addr span a {
+    color: red;
+}
+
+.det-addr input {
+    width: 600px;
+    height: 40px;
+    margin: 0px 0px 0px 30px;
+    border: 1px solid #8391a5;
+    border-radius: 5px
+}
+
+.det-addr p {
+    margin: 5px 0 20px 0;
+    padding-left: 100px;
+    font-size: 8px;
+    color: #8391a5;
+}
+
+.cont-phone span {
+    color: #8391a5;
+    font-size: 15px;
+}
+
+.cont-phone span a {
+    color: red;
+}
+
+.cont-phone input {
+    width: 600px;
+    height: 40px;
+    margin: 0px 0px 25px 30px;
+    border: 1px solid #8391a5;
+    border-radius: 5px;
+}
+
 .switch {
     width: 15px;
     height: 15px;
@@ -33,6 +91,7 @@ li {
     cursor: pointer;
     border: 1px dashed blue;
 }
-.parent-option:hover{
+
+.parent-option:hover {
     background-color: blue;
 }

@@ -86,34 +86,35 @@ export default class AddStore extends React.Component {
                 </div>
                 <div style={{ paddingLeft: '300px' }}>
                     <ul>
-                        <li>
-                            <span>*店铺名称</span>
+                        <li className='store-name'>
+                            <span><a>* </a>店铺名称</span>
                             <input
                                 value={this.state.name}
                                 onChange={this.onChange.bind(this)}
                                 data-type='name'
-                                style={{ width: '600px', height: '30px', margin: '0px 0px 25px 30px', border: '1px solid #333', borderRadius: '4px' }}
+                                
+                                style={{}}
                             />
                         </li>
 
-                        <li>
-                            <span>*详细地址</span>
+                        <li className='det-addr'>
+                            <span><a>* </a>详细地址</span>
                             <input
                                 value={this.state.addName}
                                 onChange={this.onChange.bind(this)}
-                                data-type='addName'
-                                style={{ width: '600px', height: '30px', margin: '0px 0px 0px 30px', border: '1px solid #333', borderRadius: '4px' }}
+                                data-type='addName'                              
+                                style={{ }}
                             />
-                            <p style={{ margin: '5px 0 20px 0', paddingLeft: '100px', fontSize: '8px' }}>当前城市：北京</p>
+                            <p style={{}}>当前城市：北京</p>
                         </li>
 
-                        <li>
-                            <span>*联系电话</span>
+                        <li className='cont-phone'>
+                            <span><a>* </a>联系电话</span>
                             <input
                                 value={this.state.phone}
                                 onChange={this.onChange.bind(this)}
                                 data-type='phone'
-                                style={{ width: '600px', height: '30px', margin: '0px 0px 25px 30px', border: '1px solid #333', borderRadius: '4px' }}
+                                style={{  }}
                             />
                         </li>
 
