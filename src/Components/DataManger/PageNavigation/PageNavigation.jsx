@@ -1,5 +1,5 @@
 import React from "react";
-
+var page = [];
 export default class PageNavigation extends React.Component {
     constructor(props) {
         super(props);
@@ -15,23 +15,21 @@ export default class PageNavigation extends React.Component {
             currentPage: +event.target.dataset.index
         })
         this.props.getPage(event.target.dataset.index);
+        this.pageGen(this.state.pagesum, this.state.currentPage);
     }
 
-    pageGen(pageNum, currentPage, count, index) {
-        var page = [];
-        if (pageNum > count) {
-            if (index > 2 && index < pageNum) {
-                page.push('...');
-            } else {
-                page.push(index);
-            }
-        }
-        return (page);
+    pageGen(pageNum, currentPage) {
+        // if (currentPage == 1) {
+            page.push(2);
+        // }
+
+        console.log(page);
+        return page;
+        
     }
 
     render() {
         const pagesum = Math.ceil(this.props.getCount / this.state.pageNum);
-        console.log('pagesum', this.props.getCount)
         return (
             <div>
                 <ul>
@@ -43,21 +41,19 @@ export default class PageNavigation extends React.Component {
                             }
                             this.props.getPage(this.state.currentPage)
                         }}
-                    >《</li>
+                    >《</li>                
                     {
-                        (Array.from({ length: pagesum }, (v, i) => i)).map((item, index) => {
+                        this.pageGen(pagesum, this.state.currentPage).map((item, index) => {
                             return (
-                                <li data-index={++index} key={item}
-                                    style={{ listStyle: 'none', float: 'left', width: '150px', backgroundColor: this.state.currentPage == index ? 'blue' : '#fff', cursor: 'pointer' }}
+                                <li data-index={++index} key={index}
+                                    style={{ listStyle: 'none', float: 'left', width: '20px', backgroundColor: this.state.currentPage == index ? 'blue' : '#fff', cursor: 'pointer' }}
                                     onClick={this.handleClick.bind(this)}>
-                                    {/* {index} */}
-                                    {this.pageGen(pagesum, 1, 4, index)}
-
+                                    {item}
                                 </li>
                             )
                         }
                         )
-                    }
+                    }                 
                     <li style={{ listStyle: 'none', float: 'left', cursor: 'pointer' }}
                         onClick={() => {
                             this.state.currentPage++
