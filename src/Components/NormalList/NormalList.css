@@ -1,7 +1,9 @@
 .user-list {
-    float: left;
+    /* float: left; */
     width: auto;
-    height: 100%;
+    position: absolute;
+    top: 0px;
+    bottom: 50px;
 }
 
 .user-list ul {
@@ -20,5 +22,5 @@
     list-style: none;
     float: left;
     text-align: center;
-    width: 383px;
+    width: 567px;
 }

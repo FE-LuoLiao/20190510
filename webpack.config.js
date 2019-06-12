@@ -24,41 +24,47 @@ const webpackConfigBase = {
         chunkFilename: 'chunks/[name].js',
         // publicPath: './'
     },
+
     module: {
         rules: [{
-                test: /\.jsx$/,
-                exclude: /node_modules/,
-                use: {
-                    loader: 'babel-loader'
-                }
-            },
-            {
-                test: /\.css$/,
-                use: ['style-loader', 'css-loader']
-            },
-            {
-                test: /\.(png|jpg|jpeg|gif)$/,
-                use: [{
-                    loader: 'url-loader',
-                    options: {
-                        name: '[name]-[hash:5].[ext]',
-                        limit: 1000,
-                        outputPath: 'assets/imgs/' // html和css中图片的输出路径
-                    }
-                }]
+            test: /\.jsx$/,
+            exclude: /node_modules/,
+            use: {
+                loader: 'babel-loader'
             }
+        },
+        {
+            test: /\.css$/,
+            use: ['style-loader', 'css-loader'],
+
+        },
+
+        {
+            test: /\.(png|jpg|jpeg|gif)$/,
+            use: [{
+                loader: 'url-loader',
+                options: {
+                    name: '[name]-[hash:5].[ext]',
+                    limit: 1000,
+                    outputPath: 'assets/imgs/' // html和css中图片的输出路径
+                }
+            }]
+        }
         ]
+    },
+    node: {
+        fs: 'empty'
     },
     plugins: [
         new HtmlWebpackPlugin({
-            title: 'React-demo',
+            title: 'React-demo',  
             filename: './index.html',
             template: './src/index.html',
         })
         // 去除moment的语言包
         // new webpack.ContextReplacementPlugin(/moment[\/\\]locale$/, /de|fr|hu/),
 
-        // 提取css
+        // 提取css 
         // new ExtractTextPlugin('style.[hash:4].css'),
         /* new webpack.optimize.CommonsChunkPlugin({
           name: 'common', // 入口文件名

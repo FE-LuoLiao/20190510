@@ -4,6 +4,7 @@ import { Route, Switch, HashRouter as Router } from "react-router-dom";
 
 import StartPage from './Components/StartPage/StartPage.jsx';
 import AddStore from './Components/DataManger/AddStore.jsx';
+import AddShop from './Components/DataManger/AddShop.jsx';
 import Chart from './Components/Chart/Chart.jsx';
 import Edit from './Components/Edit/Edit.jsx';
 import Explain from './Components/Explain/Explain.jsx';
@@ -18,7 +19,7 @@ import Aroute from './Components/navigation/navigation.jsx';
 
 
 class App extends React.Component {
-    render() {
+    render() {  
         return (
             <Router>
                 <div>
@@ -36,6 +37,13 @@ class App extends React.Component {
                         path="/AddStore"
                         render={props => (
                             <AddStore />
+                        )}
+                    />
+
+                    <Route
+                        path="/AddShop"
+                        render={props => (
+                            <AddShop />
                         )}
                     />
 
