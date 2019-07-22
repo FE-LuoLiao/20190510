@@ -19,7 +19,6 @@ fs.readFile('./Sanitary_Service_Point.geojson', 'utf-8', function (error, data) 
     }
 
     Object.keys(features).forEach(function (key) {
-
         features[key].geometry.coordinates.map((item, index) => {
             //  ss[index] = toDecimal(item);
              ss[index] = parseFloat(item.toFixed(5));
